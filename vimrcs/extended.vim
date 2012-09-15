@@ -13,32 +13,8 @@ set background=dark
 if has("gui_running")
     colorscheme peaksea
 else
-    colorscheme ir_black
+    colorscheme desert
 endif
-
-" Set font according to system
-if has("mac") || has("macunix")
-    set gfn=Menlo:h14
-    set shell=/bin/bash
-elseif has("win16") || has("win32")
-    set gfn=Bitstream\ Vera\ Sans\ Mono:h10
-elseif has("linux")
-    set gfn=Monospace\ 10
-    set shell=/bin/bash
-endif
-
-" Open MacVim in fullscreen mode
-if has("gui_macvim")
-    set fuoptions=maxvert,maxhorz
-    au GUIEnter * set fullscreen
-endif
-
-" Disable scrollbars (real hackers don't use scrollbars for navigation!)
-set guioptions-=r
-set guioptions-=R
-set guioptions-=l
-set guioptions-=L
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fast editing and reloading of vimrc configs
