@@ -129,3 +129,12 @@ set updatetime=2000         " Write swap files after 2 seconds of inactivity.
 set backupext=~             " Backup for "file" is "file~"
 set backupdir^=~/.backup    " Backups are written to ~/.backup/ if possible.
 set directory^=~/.backup//  " Swap files are also written to ~/.backup, too.
+
+
+" copy to buffer -> Usefull for copying text between different tmux session
+" http://stackoverflow.com/questions/11042920/how-to-copy-and-paste-between-different-tmux-panes-running-vim-instances
+vmap <C-c> :w! ~/.vimbuffer<CR>
+nmap <C-c> :.w! ~/vimbuffer<CR>
+" paste from buffer
+nmap <leader>r :r ~/.vimbuffer<CR>
+
