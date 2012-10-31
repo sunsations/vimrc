@@ -138,3 +138,6 @@ nmap <C-c> :.w! ~/vimbuffer<CR>
 " paste from buffer
 nmap <leader>r :r ~/.vimbuffer<CR>
 
+" http://www.philaquilina.com/2012/03/14/the-warm-embrace-of-vim-part-2/
+" Easy toggle NERDTree
+nmap <silent> <leader>n :NERDTreeToggle %:p:h<CR>
