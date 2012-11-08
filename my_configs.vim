@@ -141,3 +141,10 @@ nmap <leader>r :r ~/.vimbuffer<CR>
 " http://www.philaquilina.com/2012/03/14/the-warm-embrace-of-vim-part-2/
 " Easy toggle NERDTree
 nmap <silent> <leader>n :NERDTreeToggle %:p:h<CR>
+
+nmap <leader>d :CtrlP<cr>
+  
+" Ignore target directory in Play applications
+" This is useful with CtrlP
+set wildignore+=*/target/*,*.DS_Store,*/.target/*
+
