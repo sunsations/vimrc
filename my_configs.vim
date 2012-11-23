@@ -17,6 +17,7 @@ set pastetoggle=<F3>
 
 " Map jj to <ESC>
 imap jj <Esc>
+imap ff <Esc>:wa<CR>
 
 " Turn incremental search on
 set incsearch
@@ -148,3 +149,7 @@ nmap <leader>d :CtrlP<cr>
 " This is useful with CtrlP
 set wildignore+=*/target/*,*.DS_Store,*/.target/*
 
+" Keep your existing 'textwidth' settings for most lines in your file, 
+" but not have Vim automatically reformat when typing on existing lines
+" http://vim.wikia.com/wiki/Word_wrap_without_line_breaks
+set formatoptions+=l
