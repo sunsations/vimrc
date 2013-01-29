@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/development/bitbucket/newborn/scripts/test'
+let g:netrw_dirhist_2='/Users/thomasarni/opt/adt-bundle-mac/eclipse/readme'
+let g:netrw_dirhist_3='/Users/thomasarni/.rvm/gems/ruby-1.9.3-p362/gems/rails-3.2.9'
+let g:netrw_dirhist_4='/Users/thomasarni/.rvm/gems/ruby-1.9.3-p362@global/gems/bundler-1.2.3'
+let g:netrw_dirhist_5='/Users/thomasarni/.rvm/gems/ruby-1.9.3-p362/gems/hacker_term-0.0.6'
