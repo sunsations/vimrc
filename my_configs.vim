@@ -143,7 +143,9 @@ nmap <leader>r :r ~/.vimbuffer<CR>
 " Easy toggle NERDTree
 nmap <silent> <leader>n :NERDTreeToggle %:p:h<CR>
 
+" The ultimate CtrlP opening dialog! Use it.
 nmap <leader>d :CtrlP<cr>
+nmap <leader>c :CtrlPClearCache<cr>\|:CtrlP<cr>
   
 " Ignore target directory in Play applications
 " This is useful with CtrlP
