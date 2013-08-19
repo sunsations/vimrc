@@ -161,4 +161,7 @@ set wildignore+=*/target/*,*.DS_Store,*/.target/*,*.keep,*/tmp/cache/*
 " http://vim.wikia.com/wiki/Word_wrap_without_line_breaks
 set formatoptions+=l
 
-nmap <F8> :TagbarToggle<CR>
+
+" Inspired from http://blog.stwrt.ca/2012/10/31/vim-ctags
+nnoremap <leader>t :CtrlPTag<cr>
+nmap <leader>b :TagbarToggle<CR>
