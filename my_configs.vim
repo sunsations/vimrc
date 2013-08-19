@@ -160,3 +160,5 @@ set wildignore+=*/target/*,*.DS_Store,*/.target/*,*.keep,*/tmp/cache/*
 " but not have Vim automatically reformat when typing on existing lines
 " http://vim.wikia.com/wiki/Word_wrap_without_line_breaks
 set formatoptions+=l
+
+nmap <F8> :TagbarToggle<CR>
