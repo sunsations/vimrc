@@ -31,9 +31,6 @@ let NERDTreeDirArrows=0
 " Make default comment blue in syntax better readable 
 highlight comment ctermfg=lightblue
 
-" Edit .vimrc file with F12
-nmap <F12> :edit ~/.vimrc<CR>
-
 " Let Y behave consistently with D and C
 nnoremap Y  y$
 
@@ -138,7 +135,7 @@ set directory^=~/.backup//  " Swap files are also written to ~/.backup, too.
 vmap <C-c> :w! ~/.vimbuffer<CR>
 nmap <C-c> :.w! ~/vimbuffer<CR>
 " paste from buffer
-nmap <leader>r :r ~/.vimbuffer<CR>
+nmap <leader>p :r ~/.vimbuffer<CR>
 
 " http://www.philaquilina.com/2012/03/14/the-warm-embrace-of-vim-part-2/
 " Easy toggle NERDTree
@@ -146,7 +143,7 @@ nmap <silent> <leader>n :NERDTreeToggle %:p:h<CR>
 
 " The ultimate CtrlP opening dialog! Use it.
 nmap <leader>d :CtrlP<cr>
-nmap <leader>c :CtrlPClearCache<cr>\|:CtrlP<cr>
+nmap <leader>dd :CtrlPClearCache<cr>\|:CtrlP<cr>
 
 " The way searching should work
 nmap <leader>s :Ag 
@@ -165,3 +162,7 @@ set formatoptions+=l
 " Inspired from http://blog.stwrt.ca/2012/10/31/vim-ctags
 nnoremap <leader>t :CtrlPTag<cr>
 nmap <leader>b :TagbarToggle<CR>
+
+" Variable renaming from http://vim.wikia.com/wiki/Search_and_replace_the_word_under_the_cursor 
+:nnoremap <Leader>r :%s/\<<C-r><C-w>\>//g<Left><Left>
+:nnoremap <Leader>rr :%s/\<<C-r><C-w>\>//gc<Left><Left><Left>
