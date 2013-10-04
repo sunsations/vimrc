@@ -1,5 +1,8 @@
 call pathogen#infect()
 
+" Make crontab work on osx
+au! BufNewFile,BufRead crontab.* set nobackup | set nowritebackup
+
 "Display current cursor position in lower right corner. 
 set ruler
 
