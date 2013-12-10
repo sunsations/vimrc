@@ -60,6 +60,7 @@ let mapleader=","
 nnoremap <leader><leader> <c-^>
 
 " Remap <C-]> to open the [t]ag in the vim help
+" especially useful with german keyboard
 nnoremap t <C-]>
 
 " Make quitting vim without saving easier
@@ -154,7 +155,7 @@ nmap <leader>s :Ag
 " Ignore git .keep files and rails specific directories
 " Ignore target directory in Play applications
 " This is useful with CtrlP
-set wildignore+=*/target/*,*.DS_Store,*/.target/*,*.keep,*/tmp/cache/*
+set wildignore+=*/target/*,*.DS_Store,*/.target/*,*.keep,*/tmp/cache/*,*/vendor/*
 
 " Keep your existing 'textwidth' settings for most lines in your file, 
 " but not have Vim automatically reformat when typing on existing lines
