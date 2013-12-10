@@ -151,6 +151,9 @@ nmap <leader>dd :CtrlPClearCache<cr>\|:CtrlP<cr>
 
 " The way searching should work
 nmap <leader>s :Ag 
+" Search word under cursor
+" Adapted from https://github.com/mileszs/ack.vim/issues/33
+noremap <Leader>a :Ag <cword><cr>
   
 " Ignore git .keep files and rails specific directories
 " Ignore target directory in Play applications
