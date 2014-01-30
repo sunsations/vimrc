@@ -13,7 +13,7 @@ hi Directory guifg=#FF0000 ctermfg=red
 set cpoptions+=$
 
 " Show the line number
-set number
+" set number
 
 " For pasting text that's already intended, swich to this mode.
 set pastetoggle=<F3>
@@ -96,7 +96,7 @@ nmap <space> :
 "Helpeful abbreviations  
 iab lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  
 iab llorem Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.   
-iab bp binding.pry          
+iab bpry require 'pry'; binding.pry          
 
 " Wrap long lines
 set wrap
@@ -158,7 +158,7 @@ noremap <Leader>a :Ag <cword><cr>
 " Ignore git .keep files and rails specific directories
 " Ignore target directory in Play applications
 " This is useful with CtrlP
-set wildignore+=*/target/*,*.DS_Store,*/.target/*,*.keep,*/tmp/cache/*,*/vendor/*
+set wildignore+=*/target/*,*.DS_Store,*/.target/*,*.keep,*/tmp/cache/*,*/vendor/*,*/doc/api/*,*/doc/guides/*
 
 " Keep your existing 'textwidth' settings for most lines in your file, 
 " but not have Vim automatically reformat when typing on existing lines
