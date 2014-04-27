@@ -72,6 +72,17 @@ set cursorline
 " maximize the current window in new tab -> very helpfull!
 nmap tt :tabedit %<CR>
 nmap tg :tabclose<CR>
+
+" Quick an easy tab navigation
+" http://vim.wikia.com/wiki/Alternative_tab_navigation
+nnoremap <C-g> :tabnext<CR>
+"nnoremap <C-h> :tabprevious<CR>
+inoremap <C-g> <Esc>:tabnext<CR>i
+"inoremap <C-h> <Esc>:tabprevious<CR>i
+nnoremap th :tabfirst<CR>
+nnoremap tj :tabnext<CR>
+nnoremap tk :tabprev<CR>
+nnoremap tl :tablast<CR>
  
 " j and k move by screen lines. Useful in wrapped text.
 nnoremap j gj
@@ -158,7 +169,8 @@ noremap <Leader>a :Ag <cword><cr>
 " Ignore git .keep files and rails specific directories
 " Ignore target directory in Play applications
 " This is useful with CtrlP
-set wildignore+=*/target/*,*.DS_Store,*/.target/*,*.keep,*/tmp/cache/*,*/vendor/*,*/doc/api/*,*/doc/guides/*
+" _site => for genrated jekyll content
+set wildignore+=*/target/*,*.DS_Store,*/.target/*,*.keep,*/tmp/cache/*,*/vendor/*,*/doc/api/*,*/doc/guides/*,*/_site/*,*/.bundle/*
 
 " Keep your existing 'textwidth' settings for most lines in your file, 
 " but not have Vim automatically reformat when typing on existing lines
@@ -173,3 +185,17 @@ nmap <leader>b :TagbarToggle<CR>
 " Variable renaming from http://vim.wikia.com/wiki/Search_and_replace_the_word_under_the_cursor 
 :nnoremap <Leader>r :%s/\<<C-r><C-w>\>//g<Left><Left>
 :nnoremap <Leader>rr :%s/\<<C-r><C-w>\>//gc<Left><Left><Left>
+
+" Color scheme
+set t_Co=256                        " force vim to use 256 colors
+let g:solarized_termcolors=256      " use solarized 256 fallback
+syntax enable
+set background=dark
+colorscheme solarized
+
+highlight SignColumn ctermbg=234
+
+
+" Swap words
+" http://vim.wikia.com/wiki/Swapping_characters,_words_and_lines
+:nnoremap <silent> gw "_yiw:s/\(\%#\w\+\)\(\W\+\)\(\w\+\)/\3\2\1/<CR><c-o><c-l>
