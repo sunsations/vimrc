@@ -6,6 +6,11 @@ au! BufNewFile,BufRead crontab.* set nobackup | set nowritebackup
 "Display current cursor position in lower right corner. 
 set ruler
 
+" hides buffers instead of closing them
+" http://nvie.com/posts/how-i-boosted-my-vim/
+set hidden
+
+
 " Syntax highlighting on
 syntax on
 filetype plugin indent on
