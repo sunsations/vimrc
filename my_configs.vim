@@ -57,7 +57,9 @@ let mapleader=","
 
 " Switch between current and previous buffer
 " http://mislav.uniqpath.com/2011/12/vim-revisited/
-nnoremap <leader><leader> <c-^>
+" <leader><leader> is used as a prefix for easymotion
+" nnoremap <leader><leader> <c-^>
+nnoremap nn <c-^>
 
 " Remap <C-]> to open the [t]ag in the vim help
 " especially useful with german keyboard
