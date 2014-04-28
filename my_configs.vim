@@ -207,3 +207,7 @@ highlight SignColumn ctermbg=234
 " Swap words
 " http://vim.wikia.com/wiki/Swapping_characters,_words_and_lines
 :nnoremap <silent> gw "_yiw:s/\(\%#\w\+\)\(\W\+\)\(\w\+\)/\3\2\1/<CR><c-o><c-l>
+
+" Fast way to run RuboCop
+" let g:vimrubocop_config = '~/rubocop/default.yml'
+:nnoremap rr :RuboCop<CR>
