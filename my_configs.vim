@@ -64,7 +64,6 @@ let mapleader=","
 " http://mislav.uniqpath.com/2011/12/vim-revisited/
 " <leader><leader> is used as a prefix for easymotion
 " nnoremap <leader><leader> <c-^>
-nnoremap nn <c-^>
 nnoremap mm <c-^>
 
 " Remap <C-]> to open the [t]ag in the vim help
@@ -215,3 +214,17 @@ highlight SignColumn ctermbg=234
 " Rails short cuts
 map <Leader>rs :sp db/schema.rb<cr>
 map <Leader>rd :!bundle exec rspec % --format documentation<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" RENAME CURRENT FILE (thanks Gary Bernhardt)
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! RenameFile()
+    let old_name = expand('%')
+    let new_name = input('New file name: ', expand('%'), 'file')
+    if new_name != '' && new_name != old_name
+        exec ':saveas ' . new_name
+        exec ':silent !rm ' . old_name
+        redraw!
+    endif
+endfunction
+map <Leader>rn :call RenameFile()<cr>
