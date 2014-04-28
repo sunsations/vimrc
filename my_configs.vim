@@ -211,3 +211,7 @@ highlight SignColumn ctermbg=234
 " Fast way to run RuboCop
 " let g:vimrubocop_config = '~/rubocop/default.yml'
 :nnoremap rr :RuboCop<CR>
+
+" Rails short cuts
+map <Leader>rs :sp db/schema.rb<cr>
+map <Leader>rd :!bundle exec rspec % --format documentation<CR>
