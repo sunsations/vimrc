@@ -65,6 +65,7 @@ let mapleader=","
 " <leader><leader> is used as a prefix for easymotion
 " nnoremap <leader><leader> <c-^>
 nnoremap nn <c-^>
+nnoremap mm <c-^>
 
 " Remap <C-]> to open the [t]ag in the vim help
 " especially useful with german keyboard
