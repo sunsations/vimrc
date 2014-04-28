@@ -98,9 +98,6 @@ nnoremap k gk
 " <leader><space> clears search
 nnoremap <leader><space> :noh<cr>
 
-" <leader><leader> toggles between files
-nnoremap <leader><leader> <c-^>
-
 " Make MRU plugin work without hitting <enter> twice
 nmap MRU :MRU<CR>
 
