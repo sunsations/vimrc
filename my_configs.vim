@@ -71,7 +71,7 @@ nnoremap mm <c-^>
 nnoremap t <C-]>
 
 " Make quitting vim without saving easier
-noremap Q :q!<CR>
+noremap Q :qa!<CR>
 
 " Turns on the cursorline by default
 set cursorline
@@ -174,7 +174,9 @@ noremap <Leader>a :Ag <cword><cr>
 " Ignore target directory in Play applications
 " This is useful with CtrlP
 " _site => for genrated jekyll content
-set wildignore+=*/target/*,*.DS_Store,*/.target/*,*.keep,*/tmp/cache/*,*/vendor/*,*/doc/api/*,*/doc/guides/*,*/_site/*,*/.bundle/*
+set wildignore+=*/target/*,*.DS_Store,*/.target/*,*.keep,*/tmp/cache/*,*/doc/api/*,*/doc/guides/*,*/_site/*,*/.bundle/*
+" vendor dir for gem installed vim gem
+"set wildignore+=*/vendor/*
 
 " Keep your existing 'textwidth' settings for most lines in your file, 
 " but not have Vim automatically reformat when typing on existing lines
@@ -219,7 +221,7 @@ function! RenameFile()
     let old_name = expand('%')
     let new_name = input('New file name: ', expand('%'), 'file')
     if new_name != '' && new_name != old_name
-        exec ':saveas ' . new_name
+        nxec ':saveas ' . new_name
         exec ':silent !rm ' . old_name
         redraw!
     endif
