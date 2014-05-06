@@ -1,4 +1,5 @@
 call pathogen#infect()
+call pathogen#helptags()
 
 " Make crontab work on osx
 au! BufNewFile,BufRead crontab.* set nobackup | set nowritebackup
