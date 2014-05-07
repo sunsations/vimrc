@@ -88,8 +88,8 @@ nnoremap <C-g> :tabnext<CR>
 inoremap <C-g> <Esc>:tabnext<CR>i
 "inoremap <C-h> <Esc>:tabprevious<CR>i
 nnoremap th :tabfirst<CR>
-nnoremap tj :tabnext<CR>
-nnoremap tk :tabprev<CR>
+nnoremap tk :tabnext<CR>
+nnoremap tj :tabprev<CR>
 nnoremap tl :tablast<CR>
  
 " j and k move by screen lines. Useful in wrapped text.
