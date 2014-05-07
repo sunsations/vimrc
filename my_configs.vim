@@ -211,6 +211,11 @@ highlight SignColumn ctermbg=234
 " let g:vimrubocop_config = '~/rubocop/default.yml'
 :nnoremap rr :RuboCop<CR>
 
+" tell vim to use the system clipboard 
+" to make it work with tmux.
+" https://coderwall.com/p/j9wnfw
+set clipboard=unnamed
+
 " Rails short cuts
 map <Leader>rs :sp db/schema.rb<cr>
 map <Leader>rd :!bundle exec rspec % --format documentation<CR>
