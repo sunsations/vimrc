@@ -72,7 +72,7 @@ nnoremap mm <c-^>
 nnoremap t <C-]>
 
 " Make quitting vim without saving easier
-noremap Q :qa!<CR>
+"noremap Q :qa!<CR>
 
 " Turns on the cursorline by default
 set cursorline
