@@ -164,6 +164,12 @@ nmap <silent> <leader>n :NERDTreeToggle %:p:h<CR>
 nmap <leader>d :CtrlP<cr>
 nmap <leader>dd :CtrlPClearCache<cr>\|:CtrlP<cr>
 
+" Easily reload vimrc (this file)
+" This is important to edit this file
+" and make changes available without 
+" restarting vim.
+nmap <leader>ee :source $MYVIMRC<CR>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Silver Search
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
