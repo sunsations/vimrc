@@ -11,7 +11,6 @@ set ruler
 " http://nvie.com/posts/how-i-boosted-my-vim/
 set hidden
 
-
 " Syntax highlighting on
 syntax on
 filetype plugin indent on
@@ -26,6 +25,7 @@ set pastetoggle=<F3>
 
 " Map jj to <ESC>
 imap jj <Esc>
+" Map ff  to <ESC> and save file. Can sometimes be annoying when writing a double f
 imap ff <Esc>:wa<CR>
 
 " Turn incremental search on
@@ -71,9 +71,6 @@ nnoremap mm <c-^>
 " especially useful with german keyboard
 nnoremap t <C-]>
 
-" Make quitting vim without saving easier
-"noremap Q :qa!<CR>
-
 " Quick vim easily
 nmap qq :qa!<CR>
 
@@ -108,10 +105,6 @@ nmap MRU :MRU<CR>
 "Saves time; maps the spacebar to colon  
 nmap <space> : 
 
-"autopen NERDTree and focus cursor in new document  
-"autocmd VimEnter * NERDTree  
-"autocmd VimEnter * wincmd p 
-
 "Helpeful abbreviations  
 iab lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  
 iab llorem Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.   
@@ -133,7 +126,7 @@ set expandtab
 set autoindent
 
 " Make history big enough
-set history=1000
+set history=10000
 
 " Turn on titlebar support
 set title
@@ -152,7 +145,6 @@ set backupext=~             " Backup for "file" is "file~"
 set backupdir^=~/.backup    " Backups are written to ~/.backup/ if possible.
 set directory^=~/.backup//  " Swap files are also written to ~/.backup, too.
 
-
 " copy to buffer -> Usefull for copying text between different tmux session
 " http://stackoverflow.com/questions/11042920/how-to-copy-and-paste-between-different-tmux-panes-running-vim-instances
 vmap <C-c> :w! ~/.vimbuffer<CR>
@@ -168,6 +160,9 @@ nmap <silent> <leader>n :NERDTreeToggle %:p:h<CR>
 nmap <leader>d :CtrlP<cr>
 nmap <leader>dd :CtrlPClearCache<cr>\|:CtrlP<cr>
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Silver Search
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " The way searching should work
 nmap <leader>s :Ag 
 " Search word under cursor
@@ -187,7 +182,6 @@ set wildignore+=*/target/*,*.DS_Store,*/.target/*,*.keep,*/tmp/cache/*,*/doc/api
 " http://vim.wikia.com/wiki/Word_wrap_without_line_breaks
 set formatoptions+=l
 
-
 " Inspired from http://blog.stwrt.ca/2012/10/31/vim-ctags
 nnoremap <leader>t :CtrlPTag<cr>
 nmap <leader>b :TagbarToggle<CR>
@@ -204,7 +198,6 @@ set background=dark
 colorscheme solarized
 
 highlight SignColumn ctermbg=234
-
 
 " Swap words
 " http://vim.wikia.com/wiki/Swapping_characters,_words_and_lines
