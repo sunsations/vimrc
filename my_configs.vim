@@ -49,6 +49,10 @@ set scrolloff=3
 " UTF-8 Encoding
 set encoding=utf-8
 
+" Bash doesn’t load your .bashrc unless it’s interactive.
+" http://stackoverflow.com/questions/4642822/commands-executed-from-vim-are-not-recognizing-bash-command-aliases
+:set shellcmdflag=-ic
+
 " choose no compatibility with legacy vi
 set nocompatible
 
