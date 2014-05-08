@@ -34,8 +34,6 @@ set incsearch
 " Highlighting all search patterns
 set hlsearch
 
-" Make NERDTree work on OS X
-let NERDTreeDirArrows=0
 
 " Make default comment blue in syntax better readable 
 highlight comment ctermfg=lightblue
@@ -156,10 +154,18 @@ nmap <C-c> :.w! ~/vimbuffer<CR>
 " paste from buffer
 nmap <leader>p :r ~/.vimbuffer<CR>
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" NerdTree
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " http://www.philaquilina.com/2012/03/14/the-warm-embrace-of-vim-part-2/
 " Easy toggle NERDTree
 nmap <silent> <leader>n :NERDTreeToggle %:p:h<CR>
+" Make NERDTree work on OS X
+let NERDTreeDirArrows=0
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" CtrlP
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " The ultimate CtrlP opening dialog! Use it.
 nmap <leader>d :CtrlP<cr>
 nmap <leader>dd :CtrlPClearCache<cr>\|:CtrlP<cr>
@@ -200,7 +206,9 @@ nmap <leader>b :TagbarToggle<CR>
 :nnoremap <Leader>r :%s/\<<C-r><C-w>\>//g<Left><Left>
 :nnoremap <Leader>rr :%s/\<<C-r><C-w>\>//gc<Left><Left><Left>
 
-" Color scheme
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Color Scheme
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set t_Co=256                        " force vim to use 256 colors
 let g:solarized_termcolors=256      " use solarized 256 fallback
 syntax enable
