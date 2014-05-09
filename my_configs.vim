@@ -160,6 +160,8 @@ nmap <leader>p :r ~/.vimbuffer<CR>
 " http://www.philaquilina.com/2012/03/14/the-warm-embrace-of-vim-part-2/
 " Easy toggle NERDTree
 nmap <silent> <leader>n :NERDTreeToggle %:p:h<CR>
+" http://stackoverflow.com/questions/7692233/nerdtree-reveal-file-in-tree
+nmap <silent> <leader>m :NERDTreeFind<CR>
 
 " The ultimate CtrlP opening dialog! Use it.
 nmap <leader>d :CtrlP<cr>
