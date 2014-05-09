@@ -235,3 +235,10 @@ function! RenameFile()
     endif
 endfunction
 map <Leader>rn :call RenameFile()<cr>
+
+
+" Use bigger font went starting gvim
+" http://stackoverflow.com/questions/3316244/set-gvim-font-in-vimrc-file
+if has("gui_running")
+    set guifont=Menlo\ Regular:h14
+endif
