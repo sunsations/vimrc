@@ -214,6 +214,16 @@ highlight SignColumn ctermbg=234
 " https://coderwall.com/p/j9wnfw
 set clipboard=unnamed
 
+
+" copy current file name (relative/absolute) to system clipboard
+" from: http://stackoverflow.com/questions/916875/yank-file-name-path-of-current-buffer-in-vim
+if has("mac") || has("gui_macvim") || has("gui_mac")
+  nnoremap <leader>cf :let @*=expand("%")<CR>     " relative path  (src/foo.txt)
+  nnoremap <leader>cF :let @*=expand("%:p")<CR>   " absolute path  (/something/src/foo.txt)
+  nnoremap <leader>ct :let @*=expand("%:t")<CR>   " filename       (foo.txt)
+  nnoremap <leader>ch :let @*=expand("%:p:h")<CR> " directory name (/something/src)
+endif
+
 " Rails short cuts
 map <Leader>rs :sp db/schema.rb<cr>
 map <Leader>rd :!bundle exec rspec % --format documentation<CR>
