@@ -162,6 +162,8 @@ nmap <leader>p :r ~/.vimbuffer<CR>
 nmap <silent> <leader>n :NERDTreeToggle %:p:h<CR>
 " Make NERDTree work on OS X
 let NERDTreeDirArrows=0
+" http://stackoverflow.com/questions/7692233/nerdtree-reveal-file-in-tree
+nmap <silent> <leader>m :NERDTreeFind<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CtrlP
@@ -247,3 +249,10 @@ function! RenameFile()
     endif
 endfunction
 map <Leader>rn :call RenameFile()<cr>
+
+
+" Use bigger font went starting gvim
+" http://stackoverflow.com/questions/3316244/set-gvim-font-in-vimrc-file
+if has("gui_running")
+    set guifont=Menlo\ Regular:h14
+endif
