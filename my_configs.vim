@@ -100,6 +100,12 @@ nnoremap tk :tabnext<CR>
 nnoremap tj :tabprev<CR>
 nnoremap tl :tablast<CR>
 
+" Easy navigation to quick list matchings, e.g. search result by silver searcher
+" Alt + y
+noremap ¥ :cp<CR>
+" Alt + x
+noremap ≈ :cn<CR>
+
 " http://stackoverflow.com/questions/2119754/switch-to-last-active-tab-in-vim
 " really nice to switch between last to active tabs
 let g:lasttab = 1
