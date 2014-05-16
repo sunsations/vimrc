@@ -38,8 +38,6 @@ set incsearch
 " Highlighting all search patterns
 set hlsearch
 
-" Make NERDTree work on OS X
-let NERDTreeDirArrows=0
 
 " Make default comment blue in syntax better readable 
 highlight comment ctermfg=lightblue
@@ -52,6 +50,10 @@ set scrolloff=3
 
 " UTF-8 Encoding
 set encoding=utf-8
+
+" Bash doesn’t load your .bashrc unless it’s interactive.
+" http://stackoverflow.com/questions/4642822/commands-executed-from-vim-are-not-recognizing-bash-command-aliases
+:set shellcmdflag=-ic
 
 " choose no compatibility with legacy vi
 set nocompatible
@@ -164,15 +166,29 @@ nmap <C-c> :.w! ~/vimbuffer<CR>
 " paste from buffer
 nmap <leader>p :r ~/.vimbuffer<CR>
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" NerdTree
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " http://www.philaquilina.com/2012/03/14/the-warm-embrace-of-vim-part-2/
 " Easy toggle NERDTree
 nmap <silent> <leader>n :NERDTreeToggle %:p:h<CR>
+" Make NERDTree work on OS X
+let NERDTreeDirArrows=0
 " http://stackoverflow.com/questions/7692233/nerdtree-reveal-file-in-tree
 nmap <silent> <leader>m :NERDTreeFind<CR>
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" CtrlP
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " The ultimate CtrlP opening dialog! Use it.
 nmap <leader>d :CtrlP<cr>
 nmap <leader>dd :CtrlPClearCache<cr>\|:CtrlP<cr>
+
+" Easily reload vimrc (this file)
+" This is important to edit this file
+" and make changes available without 
+" restarting vim.
+nmap <leader>ee :source $MYVIMRC<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Silver Search
@@ -204,7 +220,9 @@ nmap <leader>b :TagbarToggle<CR>
 :nnoremap <Leader>r :%s/\<<C-r><C-w>\>//g<Left><Left>
 :nnoremap <Leader>rr :%s/\<<C-r><C-w>\>//gc<Left><Left><Left>
 
-" Color scheme
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Color Scheme
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set t_Co=256                        " force vim to use 256 colors
 let g:solarized_termcolors=256      " use solarized 256 fallback
 syntax enable
