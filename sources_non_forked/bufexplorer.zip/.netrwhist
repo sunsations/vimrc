@@ -1,0 +1,3 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/Users/thomasarni/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/better_errors-1.0.1'
