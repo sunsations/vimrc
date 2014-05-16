@@ -1,3 +1,7 @@
+" Make sure machit is active. This is a dependency for 
+" several plugins.
+runtime macros/matchit.vim
+
 call pathogen#infect()
 call pathogen#helptags()
 
@@ -83,15 +87,23 @@ nmap tg :tabclose<CR>
 
 " Quick an easy tab navigation
 " http://vim.wikia.com/wiki/Alternative_tab_navigation
-nnoremap <C-g> :tabnext<CR>
-"nnoremap <C-h> :tabprevious<CR>
-inoremap <C-g> <Esc>:tabnext<CR>i
-"inoremap <C-h> <Esc>:tabprevious<CR>i
+" see http://stackoverflow.com/questions/7501092/can-i-map-alt-key-in-vim
+" to remap ALT in mac
+nnoremap º :tabprevious<CR>
+nnoremap ∆ :tabnext<CR>
+inoremap º <Esc>:tabprevious<CR>i
+inoremap ∆ <Esc>:tabnext<CR>i
 nnoremap th :tabfirst<CR>
 nnoremap tk :tabnext<CR>
 nnoremap tj :tabprev<CR>
 nnoremap tl :tablast<CR>
- 
+
+" http://stackoverflow.com/questions/2119754/switch-to-last-active-tab-in-vim
+" really nice to switch between last to active tabs
+let g:lasttab = 1
+nnoremap ∫ :exe "tabn ".g:lasttab<CR> " ∫ = ALT + B
+au TabLeave * let g:lasttab = tabpagenr() 
+
 " j and k move by screen lines. Useful in wrapped text.
 nnoremap j gj
 nnoremap k gk
@@ -197,7 +209,7 @@ set t_Co=256                        " force vim to use 256 colors
 let g:solarized_termcolors=256      " use solarized 256 fallback
 syntax enable
 set background=dark
-colorscheme solarized
+" colorscheme solarized             " leeds to errors
 
 highlight SignColumn ctermbg=234
 
@@ -207,22 +219,20 @@ highlight SignColumn ctermbg=234
 
 " Fast way to run RuboCop
 " let g:vimrubocop_config = '~/rubocop/default.yml'
-:nnoremap rr :RuboCop<CR>
+:nnoremap rx :RuboCop<CR>
 
 " tell vim to use the system clipboard 
 " to make it work with tmux.
 " https://coderwall.com/p/j9wnfw
 set clipboard=unnamed
 
-
 " copy current file name (relative/absolute) to system clipboard
 " from: http://stackoverflow.com/questions/916875/yank-file-name-path-of-current-buffer-in-vim
-if has("mac") || has("gui_macvim") || has("gui_mac")
-  nnoremap <leader>cf :let @*=expand("%")<CR>     " relative path  (src/foo.txt)
-  nnoremap <leader>cF :let @*=expand("%:p")<CR>   " absolute path  (/something/src/foo.txt)
-  nnoremap <leader>ct :let @*=expand("%:t")<CR>   " filename       (foo.txt)
-  nnoremap <leader>ch :let @*=expand("%:p:h")<CR> " directory name (/something/src)
-endif
+nnoremap <leader>cf :let @*=expand("%")<CR>     " relative path  (src/foo.txt)
+nnoremap <leader>cF :let @*=expand("%:p")<CR>   " absolute path  (/something/src/foo.txt)
+nnoremap <leader>ct :let @*=expand("%:t")<CR>   " filename       (foo.txt)
+nnoremap <leader>ch :let @*=expand("%:p:h")<CR> " directory name (/something/src)
+
 
 " Rails short cuts
 map <Leader>rs :sp db/schema.rb<cr>
