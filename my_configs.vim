@@ -223,8 +223,8 @@ nnoremap <leader>t :CtrlPTag<cr>
 nmap <leader>b :TagbarToggle<CR>
 
 " Variable renaming from http://vim.wikia.com/wiki/Search_and_replace_the_word_under_the_cursor 
-:nnoremap <Leader>r :%s/\<<C-r><C-w>\>//g<Left><Left>
-:nnoremap <Leader>rr :%s/\<<C-r><C-w>\>//gc<Left><Left><Left>
+:nnoremap <Leader>rr :%s/\<<C-r><C-w>\>//g<Left><Left>
+:nnoremap <Leader>rc :%s/\<<C-r><C-w>\>//gc<Left><Left><Left>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Color Scheme
