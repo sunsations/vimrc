@@ -78,14 +78,14 @@ nnoremap mm <c-^>
 nnoremap t <C-]>
 
 " Quick vim easily
-nmap qq :qa!<CR>
+noremap qq :qa!<CR>
 
 " Turns on the cursorline by default
 set cursorline
 
 " maximize the current window in new tab -> very helpfull!
-nmap tt :tabedit %<CR>
-nmap tg :tabclose<CR>
+noremap tt :tabedit %<CR>
+noremap tg :tabclose<CR>
 
 " Quick an easy tab navigation
 " http://vim.wikia.com/wiki/Alternative_tab_navigation
@@ -120,10 +120,10 @@ nnoremap k gk
 nnoremap <leader><space> :noh<cr>
 
 " Make MRU plugin work without hitting <enter> twice
-nmap MRU :MRU<CR>
+noremap MRU :MRU<CR>
 
 "Saves time; maps the spacebar to colon  
-nmap <space> : 
+noremap <space> : 
 
 "Helpeful abbreviations  
 iab lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  
@@ -168,33 +168,33 @@ set directory^=~/.backup//  " Swap files are also written to ~/.backup, too.
 " copy to buffer -> Usefull for copying text between different tmux session
 " http://stackoverflow.com/questions/11042920/how-to-copy-and-paste-between-different-tmux-panes-running-vim-instances
 vmap <C-c> :w! ~/.vimbuffer<CR>
-nmap <C-c> :.w! ~/vimbuffer<CR>
+noremap <C-c> :.w! ~/vimbuffer<CR>
 " paste from buffer
-nmap <leader>p :r ~/.vimbuffer<CR>
+noremap <leader>p :r ~/.vimbuffer<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NerdTree
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " http://www.philaquilina.com/2012/03/14/the-warm-embrace-of-vim-part-2/
 " Easy toggle NERDTree
-nmap <silent> <leader>n :NERDTreeToggle %:p:h<CR>
+noremap <silent> <leader>n :NERDTreeToggle %:p:h<CR>
 " Make NERDTree work on OS X
 let NERDTreeDirArrows=0
 " http://stackoverflow.com/questions/7692233/nerdtree-reveal-file-in-tree
-nmap <silent> <leader>m :NERDTreeFind<CR>
+noremap <silent> <leader>m :NERDTreeFind<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CtrlP
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " The ultimate CtrlP opening dialog! Use it.
-nmap <leader>d :CtrlP<cr>
-nmap <leader>dd :CtrlPClearCache<cr>\|:CtrlP<cr>
+noremap <leader>d :CtrlP<cr>
+noremap <leader>dd :CtrlPClearCache<cr>\|:CtrlP<cr>
 
 " Easily reload vimrc (this file)
 " This is important to edit this file
 " and make changes available without 
 " restarting vim.
-nmap <leader>ee :source $MYVIMRC<CR>
+noremap <leader>ee :source $MYVIMRC<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Silver Search
@@ -224,7 +224,7 @@ set formatoptions+=l
 
 " Inspired from http://blog.stwrt.ca/2012/10/31/vim-ctags
 nnoremap <leader>t :CtrlPTag<cr>
-nmap <leader>b :TagbarToggle<CR>
+noremap <leader>b :TagbarToggle<CR>
 
 " Variable renaming from http://vim.wikia.com/wiki/Search_and_replace_the_word_under_the_cursor 
 :nnoremap <Leader>r :%s/\<<C-r><C-w>\>//g<Left><Left>
