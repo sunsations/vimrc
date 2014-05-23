@@ -199,8 +199,12 @@ nmap <leader>ee :source $MYVIMRC<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Silver Search
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" The way searching should work
-nmap <leader>s :Ag 
+" The way searching should work, leave space at end
+noremap <leader>s :Ag 
+noremap <leader>R :Ag -G '.*.rb' 
+noremap <leader>S :Ag -G '.*spec*.rb' 
+noremap <leader>C :Ag -G '.*ss$' 
+noremap <leader>Y :Ag -G '.*yml' 
 " Search word under cursor
 " Adapted from https://github.com/mileszs/ack.vim/issues/33
 noremap <Leader>a :Ag <cword><cr>
