@@ -122,11 +122,12 @@ nnoremap <leader><space> :noh<cr>
 " Make MRU plugin work without hitting <enter> twice
 nmap MRU :MRU<CR>
 
-
 "Helpeful abbreviations  
 iab lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  
 iab llorem Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.   
-iab bpry require 'pry'; binding.pry          
+iab bpry require 'pry'; binding.pry
+iab teh the
+iab tihs this
 
 " Wrap long lines
 set wrap
@@ -187,6 +188,7 @@ nmap <silent> <leader>m :NERDTreeFind<CR>
 " The ultimate CtrlP opening dialog! Use it.
 nmap <leader>d :CtrlP<cr>
 nmap <leader>dd :CtrlPClearCache<cr>\|:CtrlP<cr>
+
 
 " Easily reload vimrc (this file)
 " This is important to edit this file
