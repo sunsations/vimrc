@@ -122,8 +122,6 @@ nnoremap <leader><space> :noh<cr>
 " Make MRU plugin work without hitting <enter> twice
 nmap MRU :MRU<CR>
 
-"Saves time; maps the spacebar to colon  
-nmap <space> : 
 
 "Helpeful abbreviations  
 iab lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  
@@ -285,3 +283,6 @@ map <Leader>rn :call RenameFile()<cr>
 if has("gui_running")
     set guifont=Menlo\ Regular:h14
 endif
+
+"Saves time; maps the spacebar to colon  
+nnoremap <space> : 
