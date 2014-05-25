@@ -257,6 +257,9 @@ nnoremap <leader>cF :let @*=expand("%:p")<CR>   " absolute path  (/something/src
 nnoremap <leader>ct :let @*=expand("%:t")<CR>   " filename       (foo.txt)
 nnoremap <leader>ch :let @*=expand("%:p:h")<CR> " directory name (/something/src)
 
+" Adapted from http://vim.wikia.com/wiki/Replace_a_word_with_yanked_text
+" replace the current word with the last yanked text
+nnoremap SS diw"0P
 
 " Rails short cuts
 map <Leader>rs :sp db/schema.rb<cr>
