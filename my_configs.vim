@@ -38,6 +38,10 @@ set incsearch
 " Highlighting all search patterns
 set hlsearch
 
+" make regex behave like normal programming languages
+" http://lonelyproton.com/2013/11/useful-vim-settings/
+nnoremap / /\v
+nnoremap ? ?\v
 
 " Make default comment blue in syntax better readable 
 highlight comment ctermfg=lightblue
