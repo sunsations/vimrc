@@ -290,3 +290,9 @@ map <Leader>rn :call RenameFile()<cr>
 
 "Saves time; maps the spacebar to colon  
 nnoremap <space> : 
+
+" Configure splitjoin plugin
+let g:splitjoin_split_mapping = ''
+let g:splitjoin_join_mapping = ''
+nnoremap ss :SplitjoinSplit<cr>
+nnoremap sj :SplitjoinJoin<cr>
