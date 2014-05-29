@@ -175,6 +175,10 @@ noremap <C-c> :.w! ~/vimbuffer<CR>
 " paste from buffer
 noremap <leader>p :r ~/.vimbuffer<CR>
 
+" Insert a hash rocket with <c-l>
+" Stolen form Gary Bernhardt
+inoremap <c-l> <space>=><space>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NerdTree
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
