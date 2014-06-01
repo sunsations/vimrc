@@ -207,6 +207,7 @@ noremap <leader>s :Ag
 noremap <leader>R :Ag -G '.*.rb' 
 noremap <leader>S :Ag -G '.*spec*.rb' 
 noremap <leader>C :Ag -G '.*ss$' 
+" TODO add more for just models
 noremap <leader>Y :Ag -G '.*yml' 
 " Search word under cursor
 " Adapted from https://github.com/mileszs/ack.vim/issues/33
