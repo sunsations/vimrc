@@ -195,11 +195,8 @@ noremap <silent> <leader>m :NERDTreeFind<CR>
 noremap <leader>d :CtrlP<cr>
 noremap <leader>dd :CtrlPClearCache<cr>\|:CtrlP<cr>
 
-
-" Easily reload vimrc (this file)
-" This is important to edit this file
-" and make changes available without 
-" restarting vim.
+" Easily reload vimrc (this file). This is important to edit this file
+" and make changes available without restarting vim.
 noremap <leader>ee :source $MYVIMRC<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
