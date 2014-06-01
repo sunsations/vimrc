@@ -262,10 +262,11 @@ set clipboard=unnamed
 
 " copy current file name (relative/absolute) to system clipboard
 " from: http://stackoverflow.com/questions/916875/yank-file-name-path-of-current-buffer-in-vim
-nnoremap <leader>cf :let @*=expand("%")<CR>     " relative path  (src/foo.txt)
-nnoremap <leader>cF :let @*=expand("%:p")<CR>   " absolute path  (/something/src/foo.txt)
-nnoremap <leader>ct :let @*=expand("%:t")<CR>   " filename       (foo.txt)
-nnoremap <leader>ch :let @*=expand("%:p:h")<CR> " directory name (/something/src)
+" Only works in Gvim.
+nnoremap cf :let @*=expand("%")<CR>     " relative path  (src/foo.txt)
+nnoremap cF :let @*=expand("%:p")<CR>   " absolute path  (/something/src/foo.txt)
+nnoremap ct :let @*=expand("%:t")<CR>   " filename       (foo.txt)
+nnoremap ch :let @*=expand("%:p:h")<CR> " directory name (/something/src)
 
 " Adapted from http://vim.wikia.com/wiki/Replace_a_word_with_yanked_text
 " replace the current word with the last yanked text
