@@ -22,7 +22,7 @@ hi Directory guifg=#FF0000 ctermfg=red
 set cpoptions+=$
 
 " Show the line number
-" set number
+set number
 
 " For pasting text that's already intended, swich to this mode.
 set pastetoggle=<F3>
