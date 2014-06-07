@@ -22,7 +22,7 @@ hi Directory guifg=#FF0000 ctermfg=red
 set cpoptions+=$
 
 " Show the line number
-" set number
+set number
 
 " For pasting text that's already intended, swich to this mode.
 set pastetoggle=<F3>
@@ -57,7 +57,9 @@ set encoding=utf-8
 
 " Bash doesn’t load your .bashrc unless it’s interactive.
 " http://stackoverflow.com/questions/4642822/commands-executed-from-vim-are-not-recognizing-bash-command-aliases
-:set shellcmdflag=-ic
+" However, vim stops when executing external command.
+" See http://superuser.com/questions/646217/vim-process-stops-after-executing-an-external-command
+":set shellcmdflag=-ic
 
 " choose no compatibility with legacy vi
 set nocompatible
@@ -197,11 +199,8 @@ noremap <silent> <leader>m :NERDTreeFind<CR>
 noremap <leader>d :CtrlP<cr>
 noremap <leader>dd :CtrlPClearCache<cr>\|:CtrlP<cr>
 
-
-" Easily reload vimrc (this file)
-" This is important to edit this file
-" and make changes available without 
-" restarting vim.
+" Easily reload vimrc (this file). This is important to edit this file
+" and make changes available without restarting vim.
 noremap <leader>ee :source $MYVIMRC<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -212,6 +211,7 @@ noremap <leader>s :Ag
 noremap <leader>R :Ag -G '.*.rb' 
 noremap <leader>S :Ag -G '.*spec*.rb' 
 noremap <leader>C :Ag -G '.*ss$' 
+" TODO add more for just models
 noremap <leader>Y :Ag -G '.*yml' 
 " Search word under cursor
 " Adapted from https://github.com/mileszs/ack.vim/issues/33
@@ -264,10 +264,11 @@ set clipboard=unnamed
 
 " copy current file name (relative/absolute) to system clipboard
 " from: http://stackoverflow.com/questions/916875/yank-file-name-path-of-current-buffer-in-vim
-nnoremap <leader>cf :let @*=expand("%")<CR>     " relative path  (src/foo.txt)
-nnoremap <leader>cF :let @*=expand("%:p")<CR>   " absolute path  (/something/src/foo.txt)
-nnoremap <leader>ct :let @*=expand("%:t")<CR>   " filename       (foo.txt)
-nnoremap <leader>ch :let @*=expand("%:p:h")<CR> " directory name (/something/src)
+" Only works in Gvim.
+nnoremap cf :let @*=expand("%")<CR>     " relative path  (src/foo.txt)
+nnoremap cF :let @*=expand("%:p")<CR>   " absolute path  (/something/src/foo.txt)
+nnoremap ct :let @*=expand("%:t")<CR>   " filename       (foo.txt)
+nnoremap ch :let @*=expand("%:p:h")<CR> " directory name (/something/src)
 
 " Adapted from http://vim.wikia.com/wiki/Replace_a_word_with_yanked_text
 " replace the current word with the last yanked text
